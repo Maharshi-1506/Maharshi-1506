@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Homepage</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .bg-image {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF73txv2Yp9NuFL0fl5uUmu1q7hx7xh8LaEg&s");
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+        }
+        .bg-text {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 80%;
+            padding: 20px;
+            text-align: center;
+        }
+        .header {
+            background-color: #F97300;
+            padding: 20px 0;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .content {
+            margin: 20px;
+        }
+        .content h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+        .footer {
+            background-color: #F97300;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 95%;
+            bottom: 0;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-image"></div>
+
+    <div class="bg-text">
+        <div class="header">
+            Welcome to Our Gym
+        </div>
+        
+        <div class="content">
+            <h2>About Us</h2>
+            <p>
+                Welcome to our gym! We offer a variety of fitness classes and personal training sessions to help you achieve your health and fitness goals. Our state-of-the-art equipment and friendly staff provide the perfect environment for you to get in shape and stay motivated.
+            </p>
+        </div>
+
+        <div class="footer">
+            &copy; 2024 Gym Name. All Rights Reserved.
+        </div>
+    </div>
+</body>
+</html>
