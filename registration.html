@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration </title>
+</head>
+<style>
+    form
+    { 
+        margin: 50px;
+        border: 2px solid black;
+        text-align: center;
+    }
+    label
+    {
+        background-color: rgb(112, 92, 92);
+        color: aliceblue;
+    }
+    input
+    {
+        background-color: cornsilk;
+    }
+    option
+    {
+        background-color: cornsilk;  
+    }
+    textarea
+    {
+        background-color: cornsilk;  
+    }
+    }
+</style>
+<body>
+    <form action ="login.html"><br>
+        <label> FIRST NAME </label>
+        <br>
+        <input type="text" name ="fname" placeholder="Enter firstname">
+        <br>
+        <br>
+        <label> MIDDLE NAME </label>
+        <br>
+        <input type="text" name ="fname" placeholder="Enter middlename">
+        <br>
+        <br>
+        <label> LAST NAME </label>
+        <br>
+        <input type="text" name ="lname" placeholder="Enter lastname">
+        <br>
+        <br>
+        <label >GENDER</label>
+        <br>
+        <input type="radio" name="gender">Male
+        <input type="radio" name="gender">Female
+        <input type="radio" name="gender">Other
+        <br>
+        <br>
+        <label>SELECT LANGUAGE</label>
+        <br>
+        <select name="slect language" multiple>
+            <option>select</option>
+            <option>c</option>
+            <option>c++</option>
+            <option>java</option>
+            <option>html,css</option>
+        </select>
+        <br>
+        <br>
+        <label>ADDRESS</label><br>
+        <textarea name ="add" rows="3" cols="20"></textarea>
+        <br>
+        <br>
+        <label> E-MAIL  </label>
+        <br>
+        <input type="text" name ="email" placeholder="E-mail">
+        <br>
+        <br>
+        <input type="submit" name="SUBMIT"value="REGISTER" >
+        <input type="button" name="RESET"value="RESET">
+    </form>
+</body>
+</html>

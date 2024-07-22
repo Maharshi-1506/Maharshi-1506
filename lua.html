@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level Up Karate Academy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #f4f4f4;
+    background-color: #1a1a1a;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f4f4f4;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffa500; /* orange */
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner h1 {
+    font-size: 3rem;
+    color: #1e90ff; /* blue */
+}
+
+.cta-buttons {
+    margin-top: 20px;
+}
+
+.cta-buttons .btn {
+    background: #ffa500; /* orange */
+    color: #1a1a1a; /* dark background */
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background 0.3s;
+}
+
+.cta-buttons .btn:hover {
+    background: #ff4500; /* dark orange */
+}
+
+.intro {
+    padding: 50px 20px;
+    text-align: center;
+    background: #262626; /* darker grey */
+    color: #f4f4f4;
+}
+
+.about {
+    padding: 50px 20px;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #f4f4f4;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1000px;
+}
+
+.about-content img {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+.about-text {
+    max-width: 700px;
+}
+
+.about h2, .about h3 {
+    color: #ffa500; /* orange */
+}
+
+.classes {
+    padding: 50px 20px;
+    text-align: center;
+    background: #262626; /* darker grey */
+    color: #f4f4f4;
+}
+
+.class-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.class {
+    background: #333;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 30%;
+    min-width: 250px;
+    color: #f4f4f4;
+}
+
+.class h3 {
+    color: #ffa500; /* orange */
+}
+
+.achievements {
+    padding: 50px 20px;
+    background: #262626; /* darker grey */
+    text-align: center;
+    color: #f4f4f4;
+}
+
+.achievements ul {
+    list-style: none;
+    padding: 0;
+}
+
+.achievements li {
+    margin: 10px 0;
+}
+
+.community {
+    padding: 50px 20px;
+    background: #333;
+    text-align: center;
+    color: #f4f4f4;
+}
+
+.contact {
+    padding: 50px 20px;
+    background: #262626; /* darker grey */
+    text-align: center;
+    color: #f4f4f4;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact form label {
+    text-align: left;
+    margin: 10px 0 5px;
+}
+
+.contact form input, .contact form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #333;
+    color: #f4f4f4;
+}
+
+.contact form button {
+    padding: 10px;
+    background: #ffa500; /* orange */
+    color: #1a1a1a; /* dark background */
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact form button:hover {
+    background: #ff4500; /* dark orange */
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .quick-links a, footer .policies a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+footer .quick-links a:hover, footer .policies a:hover {
+    color: #ffa500; /* orange */
+    text-decoration: underline;
+}
+
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <img src="C:\Users\bruno\OneDrive\Pictures\Screenshots\Screenshot 2024-04-23 221517.png" alt="Level Up Karate Academy Logo"  >
+        </div>
+        Level Up Karate Academy
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#classes">Classes</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#community">Community Work</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner" id="home">
+        <img src="C:\Users\bruno\OneDrive\Pictures\Screenshots\Screenshot 2024-04-23 221517.png" alt="Karate Class">
+        <div class="banner-text">
+            <h1>Empowering Lives Through Karate</h1>
+            <div class="cta-buttons">
+                <a href="#classes" class="btn">Join Us Today</a>
+                <a href="#about" class="btn">Learn More About Our Founder</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="intro">
+        <h2>Welcome to Level Up Karate Academy</h2>
+        <p>At Level Up Karate Academy, we believe in the holistic development of individuals through the disciplined practice of karate. Join us to experience the transformative power of martial arts.</p>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <img src="c:\Users\bruno\Downloads\WhatsApp Image 2024-06-07 at 13.25.45_879071cb.jpg" alt="Pritesh Mistry">
+            <div class="about-text">
+                <h3>Meet Our Founder</h3>
+                <p>Pritesh Mistry is a distinguished martial artist and the founder of Level Up Karate Academy, an esteemed institution under the banner of ISKU (International Shotokan Karate United). With over a decade of experience in the field of karate, Pritesh has dedicated his life to the promotion and teaching of this martial art. His expertise and passion have been instrumental in spreading the values and discipline of karate across various regions of Ahmedabad.</p>
+                <p>Pritesh believes in the holistic development of individuals through karate, emphasizing physical, mental, and spiritual growth. His personalized approach to training ensures each student receives tailored attention, fostering an environment of mutual respect and continuous improvement.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="classes" id="classes">
+        <h2>Our Classes</h2>
+        <div class="class-details">
+            <div class="class">
+                <h3>Beginner Classes</h3>
+                <p>Introduction to karate fundamentals. Suitable for all ages.</p>
+                <p>Schedule: Monday & Wednesday, 5 PM - 6 PM</p>
+            </div>
+            <div class="class">
+                <h3>Intermediate Classes</h3>
+                <p>Advanced techniques and forms. Requires completion of beginner level.</p>
+                <p>Schedule: Tuesday & Thursday, 6 PM - 7 PM</p>
+            </div>
+            <div class="class">
+                <h3>Advanced Classes</h3>
+                <p>Mastery of advanced karate techniques. Invitation only.</p>
+                <p>Schedule: Friday, 5 PM - 7 PM</p>
+            </div>
+        </div>
+        <a href="#contact" class="btn">Enroll Now</a>
+    </section>
+
+    <section class="achievements" id="achievements">
+        <h2>Our Achievements</h2>
+        <ul>
+            <li>Recognized member of ISKU, adhering to high training standards.</li>
+            <li>Over 500 students trained across various regions of Ahmedabad.</li>
+            <li>Successful community empowerment programs in collaboration with NGOs.</li>
+        </ul>
+    </section>
+
+    <section class="community" id="community">
+        <h2>Community Work</h2>
+        <p>Pritesh Mistry has shown a strong commitment to social responsibility by collaborating with various non-governmental organizations (NGOs). Through these collaborations, he has offered karate training as a tool for empowerment and self-defense, particularly targeting underprivileged sections of society. His community-oriented initiatives have provided numerous individuals with essential life skills and a sense of confidence.</p>
+        <p>Our community programs aim to make a positive impact and help individuals gain self-esteem and resilience through karate training.</p>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div class="contact-info">
+            <p>Phone: +91 12345 67890</p>
+            <p>Email: info@levelupkarate.com</p>
+            <p>Address: Level Up Karate Academy, Gota, Ahmedabad, Gujarat, India</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="quick-links">
+            <a href="#home">Home</a> |
+            <a href="#about">About Us</a> |
+            <a href="#classes">Classes</a> |
+            <a href="#achievements">Achievements</a> |
+            <a href="#community">Community Work</a> |
+            <a href="#contact">Contact Us</a>
+        </div>
+        <p>&copy; 2024 Level Up Karate Academy. All Rights Reserved.</p>
+        <div class="policies">
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href="terms.html">Terms of Service</a>
+        </div>
+    </footer>
+</body>
+</html>

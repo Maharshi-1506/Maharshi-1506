@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Diary</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #343a40;
+            color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #495057;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #f8f9fa;
+            font-family: 'Georgia', serif;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            color: #f8f9fa;
+        }
+
+        .btn-custom {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+        }
+
+        .btn-custom:hover {
+            background-color: #218838;
+        }
+
+        .diary-entry {
+            background-color: #6c757d;
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .diary-entry h2 {
+            color: #f8f9fa;
+        }
+
+        .diary-entry p {
+            color: #f8f9fa;
+        }
+
+        #error {
+            color: #dc3545;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="login">
+        <h1 class="text-center">Login to Your Diary</h1>
+        <p class="text-center">Please enter your password to access your personal diary.</p>
+        <div class="form-group">
+            <input type="password" class="form-control" id="password" placeholder="Enter your password">
+        </div>
+        <button class="btn btn-custom btn-block" onclick="login()">Login</button>
+        <p id="error"></p>
+    </div>
+    
+    <div class="container" id="diary" style="display: none;">
+        <h1 class="text-center">My Diary</h1>
+        <p>Welcome to your personal diary. Fill in the date, day, and write your thoughts below.</p>
+        <form id="diaryForm">
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" class="form-control" id="date" name="date" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="day">Day:</label>
+                <input type="text" class="form-control" id="day" name="day" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="entry">Diary Entry:</label>
+                <textarea class="form-control" id="entry" name="entry" rows="10" required placeholder="Write your thoughts here..."></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-custom btn-block">Save Entry</button>
+        </form>
+        <div id="entries"></div>
+    </div>
+
+    <script>
+        const PASSWORD = "your_secure_password";  // Change this to your desired password
+
+        function login() {
+            const inputPassword = document.getElementById('password').value;
+            const errorElement = document.getElementById('error');
+            
+            if (inputPassword === PASSWORD) {
+                document.getElementById('login').style.display = 'none';
+                document.getElementById('diary').style.display = 'block';
+                errorElement.textContent = '';
+            } else {
+                errorElement.textContent = 'Incorrect password. Please try again.';
+            }
+        }
+
+        document.getElementById('diaryForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const date = document.getElementById('date').value;
+            const day = document.getElementById('day').value;
+            const entry = document.getElementById('entry').value;
+            
+            const entryDiv = document.createElement('div');
+            entryDiv.className = 'diary-entry';
+            entryDiv.innerHTML = `<h2>${date} (${day})</h2><p>${entry}</p>`;
+            
+            document.getElementById('entries').appendChild(entryDiv);
+            
+            // Clear form after submission
+            document.getElementById('diaryForm').reset();
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* Reset default browser styles */
+body, h1, h2, ul, li, p, form, input, select, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #B85042;
+    color: #E7E8D1;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #B85042;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color:  #E7E8D1;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    background-color:  #E7E8D1;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #A7BEAE;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #B85042;
+    color:  #E7E8D1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #B85042;
+}
+
+footer {
+    background-color: #B85042;
+    color: #E7E8D1;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+</style>
+<body>
+    <header>
+        <h1>Blood Donation Management System</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#donor-registration">Donor Registration</a></li>
+            <li><a href="#appointment-scheduling">Appointment Scheduling</a></li>
+            <li><a href="#donor-search">Donor Search</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="donor-registration">
+            <h2>Donor Registration</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="blood-type">Blood Type:</label>
+                <select id="blood-type" name="blood-type">
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+                <!-- Add more fields for other donor information -->
+                <button type="submit">Register</button>
+            </form>
+        </section>
+        <section id="appointment-scheduling">
+            <h2>Appointment Scheduling</h2>
+            <form>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                <button type="submit">Schedule Appointment</button>
+            </form>
+        </section>
+        <section id="donor-search">
+            <h2>Donor Search</h2>
+            <form>
+                <label for="search-blood-type">Blood Type:</label>
+                <select id="search-blood-type" name="search-blood-type">
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+                <button type="submit">Search Donors</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Blood Donation Management System</p>
+    </footer>
+</body>
+</html>
